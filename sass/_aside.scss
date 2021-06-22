@@ -1,0 +1,116 @@
+aside {
+  z-index: 100;
+  transition: width 0.4s ease;
+  width: 115px;
+  background-color: #198ff5;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .logo {
+    background-color: #1ba0ec;
+    p {
+      margin: 0;
+      text-align: center;
+      padding: 1.5rem 0;
+      color: #fff;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+  }
+  nav {
+    margin: auto 0;
+    padding: 0 2rem;
+    ul {
+      li {
+        a {
+          display: inline-block;
+          width: 100%;
+          color: #fff;
+          text-decoration: none;
+          position: relative;
+          padding: 0.5rem 1rem;
+          margin-bottom: 1rem;
+          border-radius: 13px;
+          font-size: 0.9rem;
+          font-weight: 600;
+          transition: box-shadow 0.4s ease;
+          &:hover {
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 14px 18px rgba(0, 0, 0, 0.1);
+          }
+          i {
+            font-size: 1rem;
+          }
+          span {
+            position: absolute;
+            margin-left: 12px;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+aside:hover {
+  width: 200px;
+}
+aside:hover .hover-apper {
+  display: inline;
+}
+#mobile-nav-btn {
+  z-index: 1999;
+  display: none;
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  cursor: pointer;
+  div {
+    width: 25px;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 5px;
+    transition: all 0.4s ease-in-out;
+    &:nth-child(1) {
+      transform-origin: 1px;
+    }
+    &:nth-child(3) {
+      transform-origin: 2px;
+    }
+  }
+}
+/*Media Quries*/
+@media (max-width: 900px) {
+  aside {
+    transition: transform 0.4s ease-in-out;
+    height: 100vh;
+    width: 200px;
+    transform: translateX(-100%);
+  }
+  .hover-apper {
+    display: inline-block;
+    position: static;
+  }
+  #mobile-nav-btn {
+    display: block;
+  }
+}
+.show {
+  transform: translateX(0);
+}
+.rotate {
+  div {
+    &:nth-child(1) {
+      transform: rotate(45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}

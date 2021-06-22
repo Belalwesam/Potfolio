@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+@import 'aside';
+@import 'about';
+@import 'contact';
+@import 'home';
+@import 'skills';
+@import 'projects';
+$font-family: 'Poppins', sans-serif;
+$primary-color:#198ff5;
+$secondary-font-color:#5F6F81;
+* , *::before , *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    font-family: $font-family;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    color: #333;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
